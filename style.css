@@ -1,0 +1,268 @@
+
+       @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+       :root {
+        --primary: #92400e;
+        --primary-dark: #78350f;
+        --bronze: #cd7f32;
+        --warm-bg: #f4f1e8;
+        --warm-white: #fefdfb;
+        --warm-black: #1c1917;
+        --gold: #d4af37;
+        --cream: #f7f3e9;
+       }
+      
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+      }
+      
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+      
+      /* Enhanced Animations */
+      @keyframes fadeInUp {
+        from { 
+          opacity: 0; 
+          transform: translateY(40px); 
+        }
+        to { 
+          opacity: 1; 
+          transform: translateY(0); 
+        }
+      }
+      
+      @keyframes slideInLeft {
+        from { 
+          opacity: 0; 
+          transform: translateX(-60px); 
+        }
+        to { 
+          opacity: 1; 
+          transform: translateX(0); 
+        }
+      }
+
+      @keyframes scaleIn {
+        from { 
+          opacity: 0; 
+          transform: scale(0.9); 
+        }
+        to { 
+          opacity: 1; 
+          transform: scale(1); 
+        }
+      }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      
+      .animate-fade-up {
+        animation: fadeInUp 1s ease-out forwards;
+      }
+      
+      .animate-slide-left {
+        animation: slideInLeft 0.8s ease-out forwards;
+      }
+
+      .animate-scale-in {
+        animation: scaleIn 0.6s ease-out forwards;
+      }
+
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      
+      /* Luxury Typography */
+      .display-font {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+      }
+    
+      .heading-font {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+      }
+    
+      .body-font {
+        font-family: 'Inter', sans-serif;
+        line-height: 1.7;
+        font-weight: 400;
+      }
+
+      /* Decorative Elements */
+      .decorative-line::before {
+        content: '';
+        position: absolute;
+        left: -40px;
+        top: 50%;
+        width: 30px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #cd7f32, transparent);
+        transform: translateY(-50%);
+      }
+
+      .decorative-dot::after {
+        content: '';
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #cd7f32;
+        transform: translateY(-50%);
+      }
+
+      /* Premium Shadows */
+      .luxury-shadow {
+        box-shadow: 
+          0 0 0 1px rgba(205, 127, 50, 0.05),
+          0 2px 4px rgba(0, 0, 0, 0.02),
+          0 8px 16px rgba(205, 127, 50, 0.08),
+          0 16px 32px rgba(0, 0, 0, 0.04);
+      }
+
+      .warm-glow {
+        box-shadow: 0 0 30px rgba(205, 127, 50, 0.15);
+      }
+
+      /* Grid Overlay */
+      .grid-overlay::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+          linear-gradient(rgba(205, 127, 50, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(205, 127, 50, 0.03) 1px, transparent 1px);
+        background-size: 50px 50px;
+        pointer-events: none;
+      }
+
+      /* Navigation Enhancement */
+      .nav-link {
+        position: relative;
+        padding: 8px 16px;
+        border-radius: 24px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .nav-link:hover {
+        background-color: rgba(205, 127, 50, 0.1);
+        transform: translateY(-1px);
+      }
+
+      .nav-link.active {
+        background-color: rgba(205, 127, 50, 0.15);
+        color: #92400e;
+        font-weight: 600;
+      }
+
+      .nav-link.active::before {
+        content: '';
+        position: absolute;
+        left: 6px;
+        top: 50%;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #cd7f32;
+        transform: translateY(-50%);
+      }
+
+      /* Sectional Dividers */
+      .section-divider {
+        position: relative;
+        text-align: center;
+        margin: 80px 0;
+      }
+
+      .section-divider::before,
+      .section-divider::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 120px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #cd7f32, transparent);
+      }
+
+      .section-divider::before {
+        left: -140px;
+      }
+
+      .section-divider::after {
+        right: -140px;
+      }
+
+      /* Card Enhancements */
+      .designer-card {
+        background: linear-gradient(135deg, #fefdfb 0%, #f7f3e9 100%);
+        border: 1px solid rgba(205, 127, 50, 0.1);
+        border-radius: 16px;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .designer-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #cd7f32, transparent);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .designer-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 
+          0 0 0 1px rgba(205, 127, 50, 0.1),
+          0 8px 32px rgba(205, 127, 50, 0.15),
+          0 32px 64px rgba(0, 0, 0, 0.1);
+      }
+
+      .designer-card:hover::before {
+        opacity: 1;
+      }
+
+      /* Responsive Enhancements */
+      @media (max-width: 768px) {
+        .decorative-line::before,
+        .decorative-dot::after {
+          display: none;
+        }
+        
+        .section-divider::before,
+        .section-divider::after {
+          width: 60px;
+        }
+        
+        .section-divider::before {
+          left: -80px;
+        }
+        
+        .section-divider::after {
+          right: -80px;
+        }
+      }
